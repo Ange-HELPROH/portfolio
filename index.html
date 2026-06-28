@@ -1,0 +1,866 @@
+﻿<!DOCTYPE html> <!-- Déclaration du type de document pour HTML5 -->
+<html lang="fr"> <!-- Balise racine de la page avec l'attribut de langue française (fr) -->
+
+<head> <!-- Début de l'en-tête du document, contenant les métadonnées de la page -->
+    <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta viewport pour s'assurer du bon rendu responsive sur mobile/tablette/desktop -->
+    <title>Ange Teufack — Étudiant Ingénieur Data Science & IA</title> <!-- Titre SEO principal orienté recrutement -->
+    <meta name="description" content="Portfolio d’Ange Teufack, étudiant ingénieur en Data Science, IA, IoT et développement logiciel, en recherche d’alternance à partir de septembre 2026 en Île-de-France."> <!-- Description SEO orientée alternance -->
+    <meta name="robots" content="index, follow"> <!-- Indique aux moteurs de recherche qu'ils peuvent indexer et suivre les liens -->
+    <meta name="theme-color" content="#F4F8FC"> <!-- Couleur de thème cohérente avec le thème clair par défaut du portfolio -->
+    <meta name="author" content="Ange Teufack"> <!-- Auteur de la page pour renforcer l'identité du portfolio -->
+    <meta name="keywords" content="Ange Teufack, portfolio, étudiant ingénieur, Data, IA, IoT, développement web, ECAM-EPMI"> <!-- Mots-clés mesurés et cohérents avec le contenu réel -->
+    <link rel="canonical" id="canonical-url" href="/"> <!-- Rempli dynamiquement avec l'URL publique réelle du site -->
+    <meta property="og:type" content="website"> <!-- Type de contenu partagé sur les réseaux sociaux -->
+    <meta property="og:site_name" content="Portfolio Ange Teufack"> <!-- Nom du site affiché lors du partage -->
+    <meta property="og:title" content="Ange Teufack — Étudiant Ingénieur Data Science & IA"> <!-- Titre de partage Open Graph -->
+    <meta property="og:description" content="Portfolio d’Ange Teufack, étudiant ingénieur en Data Science, IA, IoT et développement logiciel, en recherche d’alternance à partir de septembre 2026 en Île-de-France."> <!-- Description Open Graph -->
+    <meta property="og:url" id="og-url" content="/"> <!-- Rempli dynamiquement avec l'URL publique réelle du site -->
+    <!-- Image Open Graph branchée sur assets/images/og-portfolio-ange-teufack.png -->
+    <meta property="og:image" content="assets/images/og-portfolio-ange-teufack.png"> <!-- Image de partage prévue pour LinkedIn et les réseaux sociaux -->
+    <meta property="og:image:alt" content="Portfolio d'Ange Teufack, étudiant ingénieur Data, IA, IoT et développement web"> <!-- Texte alternatif de l'image de partage -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Carte Twitter/X avec grande image de partage -->
+    <meta name="twitter:title" content="Ange Teufack — Étudiant Ingénieur Data Science & IA"> <!-- Titre optimisé pour Twitter/X -->
+    <meta name="twitter:description" content="Portfolio d’Ange Teufack, étudiant ingénieur en Data Science, IA, IoT et développement logiciel, en recherche d’alternance à partir de septembre 2026 en Île-de-France."> <!-- Description optimisée pour Twitter/X -->
+    <meta name="twitter:image" content="assets/images/og-portfolio-ange-teufack.png"> <!-- Image de partage prévue pour Twitter/X -->
+    <script>
+        (function () {
+            try {
+                var canonicalHref = window.location.origin + window.location.pathname;
+                var canonicalEl = document.getElementById('canonical-url');
+                var ogUrlEl = document.getElementById('og-url');
+
+                if (canonicalEl) {
+                    canonicalEl.setAttribute('href', canonicalHref);
+                }
+
+                if (ogUrlEl) {
+                    ogUrlEl.setAttribute('content', canonicalHref);
+                }
+            } catch (error) {
+                /* Laisse les valeurs par défaut si l'environnement bloque l'accès à location. */
+            }
+        })();
+    </script>
+
+    <!-- Importation de Google Fonts pour la police "Inter" -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com"> <!-- Prépare la résolution DNS des polices Google pour réduire le temps de connexion -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com"> <!-- Prépare la résolution DNS du CDN qui sert les fichiers de police -->
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"> <!-- Prépare la résolution DNS du CDN utilisé pour les icônes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Préconnexion à l'API de Google Fonts pour de meilleures performances -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Préconnexion aux serveurs hébergeant les fichiers de police -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- Préconnexion au CDN des icônes pour réduire le coût de la première requête -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Téléchargement des graisses 300, 400, 600 et 700 de la police Inter -->
+
+    <!-- Importation de Font Awesome pour l'utilisation d'icônes vectorielles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers la bibliothèque d'icônes via un CDN -->
+
+    <!-- Importation de la feuille de style CSS personnalisée -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Lien relatif vers le fichier de style local -->
+</head> <!-- Fin de l'en-tête du document -->
+
+<body class="light-theme"> <!-- Début du corps du document, contenant tout le contenu visible -->
+    <script>
+        /* Initialisation très tôt du thème sauvegardé pour limiter le flash visuel au chargement. */
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-theme');
+                document.body.classList.add('dark-theme');
+            }
+        })();
+    </script>
+
+    <!-- ============================================== -->
+    <!-- SECTION HEADER : BARRE DE NAVIGATION FIXE -->
+    <!-- ============================================== -->
+    <header class="header" id="header"> <!-- Balise header pour la zone d'en-tête avec classe et ID -->
+        <nav class="navbar container">
+            <!-- Balise nav pour la navigation principale, centrée via la classe container -->
+
+            <div class="logo"> <!-- Conteneur pour le logo du site -->
+                <a href="#hero" class="logo-link">AT</a> <!-- Lien vers l'ancre #hero avec les initiales "AT" -->
+            </div> <!-- Fin du conteneur logo -->
+
+            <ul class="nav-links" id="nav-links"> <!-- Liste non ordonnée pour les liens de navigation, réorganisée pour le parcours alternance -->
+                <li><a href="#about" class="nav-item" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#projects" class="nav-item" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#skills" class="nav-item" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#experiences" class="nav-item" data-i18n="nav.experiences">Expériences</a></li>
+                <li><a href="#certifications" class="nav-item" data-i18n="nav.certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-item" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+
+            <div class="header-actions"> <!-- Regroupe les liens externes et les préférences d'affichage dans le header -->
+                <div class="nav-socials"> <!-- Conteneur pour les liens externes principaux du portfolio -->
+                    <a href="https://linktr.ee/helprohtechdev" target="_blank" rel="noopener noreferrer" aria-label="Linktree d'Ange Teufack" data-i18n-aria-label="header.linktreeAria">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/teufack-ange-junior" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Ange Teufack" data-i18n-aria-label="header.linkedinAria">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Ange-HELPROH" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub d'Ange Teufack" data-i18n-aria-label="header.githubAria">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div> <!-- Fin du conteneur des liens externes -->
+
+                <div class="preference-controls"> <!-- Boutons de préférences sans dupliquer le contenu de la page -->
+                    <button class="preference-btn theme-toggle" id="theme-toggle" type="button" aria-label="Activer le thème sombre">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                    <button class="preference-btn language-toggle" id="language-toggle" type="button" aria-label="Passer le site en anglais">EN</button>
+                </div> <!-- Fin des préférences -->
+            </div> <!-- Fin du regroupement header-actions -->
+
+            <button class="burger-menu" id="burger-menu" type="button" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="nav-links" data-i18n-aria-label="menu.open">
+                <!-- Bouton de menu mobile accessible avec état ARIA -->
+                <span class="bar"></span> <!-- Première barre du menu burger -->
+                <span class="bar"></span> <!-- Deuxième barre du menu burger -->
+                <span class="bar"></span> <!-- Troisième barre du menu burger -->
+            </button> <!-- Fin du bouton de menu burger -->
+
+        </nav> <!-- Fin de la balise nav -->
+    </header> <!-- Fin de la section header -->
+
+    <!-- ============================================== -->
+    <!-- SECTION 1 : HERO (ACCUEIL) -->
+    <!-- ============================================== -->
+    <section class="hero" id="hero"> <!-- Balise section pour l'accueil principal du site -->
+        <div class="container hero-container fade-in"> <!-- Nouveau hero structuré en deux colonnes plus efficaces pour un recruteur -->
+
+            <div class="hero-media-column"> <!-- Colonne gauche : portrait principal + certifications mises en avant -->
+                <div class="hero-portrait-card"> <!-- Carte média principale pour mieux mettre en valeur le portrait -->
+                    <p class="hero-side-kicker" data-i18n="hero.profileKicker">Profil</p> <!-- Petit repère éditorial au-dessus du portrait -->
+
+                    <div class="hero-image-wrapper"> <!-- Conteneur pour la photo de profil, recentré dans la carte -->
+                        <!-- IMAGE DE PROFIL : chemin standardisé vers l'asset final -->
+                        <img src="assets/images/profile/ange-teufack-profile.jpg" alt="Portrait professionnel d'Ange Teufack" class="profile-image" loading="eager" decoding="async" width="800" height="797" data-i18n-alt="alts.profile" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                        <div class="image-placeholder profile-placeholder asset-fallback" hidden>
+                            <span data-i18n="fallbacks.profile">Portrait professionnel</span>
+                        </div>
+                        <!-- Le fallback reste invisible tant que la photo de profil existe bien dans le dossier prévu -->
+                    </div> <!-- Fin du conteneur du portrait -->
+                </div> <!-- Fin de la carte portrait -->
+
+                <div class="hero-certifications-card"> <!-- Bloc compact de crédibilité avec certifications visibles dès l'arrivée -->
+                    <div class="hero-side-header"> <!-- En-tête éditorial du bloc certifications -->
+                        <p class="hero-side-kicker" data-i18n="hero.certificationsKicker">Certifications mises en avant</p>
+                        <p class="hero-side-text" data-i18n="hero.certificationsText">Deux validations visibles pour appuyer rapidement le positionnement IA et IoT.</p>
+                    </div> <!-- Fin de l'en-tête certifications -->
+
+                    <div class="hero-certifications-grid"> <!-- Vignettes compactes et directement utiles pour un recruteur -->
+                        <a href="https://www.linkedin.com/learning/certificates/849f143caab52109ae4b1e7e2794d2eafde2a407134fc74d05cbd39465031d60?integrationType=lilApp" target="_blank" rel="noopener noreferrer" class="hero-certification-mini"> <!-- Certification 1 réutilisée dans le hero -->
+                            <div class="hero-certification-thumb"> <!-- Mini aperçu de certificat avec fallback propre -->
+                                <img src="assets/images/certificates/cert-ia-generative.png" alt="Certificat Découvrir l’IA générative" class="hero-mini-thumb" loading="lazy" decoding="async" width="1200" height="900" data-i18n-alt="alts.certGenerativeAi" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                                <div class="image-placeholder asset-fallback hero-mini-fallback" hidden><span>IA</span></div>
+                            </div>
+                            <div class="hero-mini-content"> <!-- Libellés compacts pour lecture immédiate -->
+                                <p class="hero-mini-title" data-i18n="certifications.generativeAi.name">Découvrir l’IA générative</p>
+                                <p class="hero-mini-issuer" data-i18n="certifications.generativeAi.issuer">LinkedIn Learning</p>
+                            </div>
+                        </a> <!-- Fin de la vignette certificat IA -->
+
+                        <a href="https://www.linkedin.com/learning/certificates/6954e3675add2af9d658536b9e768705e209bc07b96821f886abe8fac695bbe9?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="hero-certification-mini"> <!-- Certification 2 réutilisée dans le hero -->
+                            <div class="hero-certification-thumb"> <!-- Mini aperçu de certificat avec fallback propre -->
+                                <img src="assets/images/certificates/cert-iot.png" alt="Certificat Les fondements de l’IoT" class="hero-mini-thumb" loading="lazy" decoding="async" width="1200" height="900" data-i18n-alt="alts.certIot" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                                <div class="image-placeholder asset-fallback hero-mini-fallback" hidden><span>IoT</span></div>
+                            </div>
+                            <div class="hero-mini-content"> <!-- Libellés compacts pour lecture immédiate -->
+                                <p class="hero-mini-title" data-i18n="certifications.iot.name">Les fondements de l’IoT</p>
+                                <p class="hero-mini-issuer" data-i18n="certifications.iot.issuer">LinkedIn Learning</p>
+                            </div>
+                        </a> <!-- Fin de la vignette certificat IoT -->
+                    </div> <!-- Fin de la grille certifications hero -->
+                </div> <!-- Fin du bloc certifications hero -->
+            </div> <!-- Fin de la colonne média -->
+
+            <div class="hero-content hero-copy-card"> <!-- Colonne droite : identité, positionnement, badges et CTA -->
+                <p class="hero-eyebrow" data-i18n="hero.eyebrow">Recherche d’alternance</p> <!-- Ligne de cadrage recruteur immédiatement visible -->
+
+                <div class="hero-name-stack"> <!-- Bloc nom plus fort et mieux hiérarchisé -->
+                    <h1 class="hero-firstname" data-i18n="hero.firstName">Ange</h1> <!-- Prénom affiché en grand titre (h1) -->
+                    <h2 class="hero-lastname" data-i18n="hero.lastName">TEUFACK</h2> <!-- Nom affiché en sous-titre (h2) -->
+                </div> <!-- Fin du bloc nom -->
+
+                <h3 class="hero-title" data-i18n="hero.title">Étudiant Ingénieur Data Science & IA</h3> <!-- Titre professionnel -->
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Data Science · IA générative · IoT · Automatisation</p> <!-- Sous-titre de spécialisation -->
+                <p class="hero-description" data-i18n="hero.description">Je conçois des solutions concrètes en Data, IA et IoT : dashboards, automatisations, assistants IA et systèmes connectés.</p> <!-- Phrase de valeur principale -->
+
+                <div class="hero-badges" aria-label="Objectif d'alternance et informations clés" data-i18n-aria-label="hero.badgesAria"> <!-- Badges de positionnement pour rendre l'objectif lisible dès le hero -->
+                    <span class="hero-badge hero-badge-accent" data-i18n="hero.badgeGoal">Recherche d’alternance</span>
+                    <span class="hero-badge" data-i18n="hero.badgeRhythm">1 semaine école / 3 semaines entreprise</span>
+                    <span class="hero-badge" data-i18n="hero.badgeDate">Septembre 2026</span>
+                    <span class="hero-badge" data-i18n="hero.badgeLanguages">FR · EN · IT</span>
+                    <span class="hero-badge hero-badge-location" data-i18n="hero.badgeLocation">Herblay 95220 · Val-d’Oise · Île-de-France</span>
+                </div>
+
+                <p class="hero-opportunity" data-i18n="hero.opportunity">Disponible pour une alternance à partir de septembre 2026, avec un rythme école / entreprise adaptable selon le calendrier.</p>
+
+                <div class="hero-buttons"> <!-- Conteneur pour les boutons d'appel à l'action -->
+                    <a href="#projects" class="btn btn-primary"><span data-i18n="hero.ctaProjects">Voir mes projets</span></a>
+                    <!-- Bouton principal vers la section Projets -->
+                    <!-- Fichier CV branché sur le chemin standard du projet -->
+                    <!-- Le lien reste stable pour GitHub Pages et les futures mises a jour du PDF -->
+                    <a href="assets/cv/CV_Ange_Teufack_2026.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><span data-i18n="hero.ctaCv">Télécharger mon CV</span></a>
+                    <!-- Bouton secondaire pour télécharger le CV avec un chemin propre et stable -->
+                </div> <!-- Fin du conteneur des boutons -->
+            </div> <!-- Fin du conteneur de texte -->
+
+        </div> <!-- Fin du conteneur central de la section hero -->
+    </section> <!-- Fin de la section hero -->
+
+    <!-- ============================================== -->
+    <!-- SECTION 2 : À PROPOS -->
+    <!-- ============================================== -->
+    <section class="about section-padding" id="about"> <!-- Section À propos avec padding standard -->
+        <div class="container fade-in"> <!-- Conteneur centré avec animation fade-in -->
+            <h2 class="section-title" data-i18n="about.title">À propos de moi</h2> <!-- Titre principal de la section -->
+
+            <div class="about-content"> <!-- Conteneur en grille/flex pour le contenu "À propos" -->
+
+                <div class="about-text"> <!-- Bloc de présentation recentré sur les informations recruteur essentielles -->
+                    <p data-i18n="about.paragraph1">Étudiant ingénieur à l’ECAM-EPMI, je me spécialise en Data Science, Intelligence Artificielle et IoT. Je conçois des projets concrets mêlant analyse de données, automatisation, applications web et systèmes connectés.</p>
+                    <p data-i18n="about.paragraph2">Je recherche une alternance dès septembre 2026 pour contribuer à des projets utiles en Data, IA ou IoT, avec un rythme souhaité d’1 semaine école / 3 semaines entreprise.</p>
+                    <p data-i18n="about.paragraph3">Basé à Herblay (95220), dans le Val-d’Oise, je reste mobile en Île-de-France.</p>
+
+                    <ul class="about-proof-list" aria-label="Repères clés du profil" data-i18n-aria-label="about.proofsAria"> <!-- Repères compacts orientés recrutement -->
+                        <li>
+                            <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                            <div>
+                                <p class="about-proof-title" data-i18n="about.proof1Title">Étudiant ingénieur ECAM-EPMI</p>
+                                <p class="about-proof-subtitle" data-i18n="about.proof1Subtitle">Parcours Data Science, IA & IoT</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                            <div>
+                                <p class="about-proof-title" data-i18n="about.proof2Title">Recherche d’alternance – Sept. 2026</p>
+                                <p class="about-proof-subtitle" data-i18n="about.proof2Subtitle">Rythme souhaité : 1 semaine école / 3 semaines entreprise</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <p class="about-proof-title" data-i18n="about.proof3Title">Herblay 95220 · Val-d’Oise</p>
+                                <p class="about-proof-subtitle" data-i18n="about.proof3Subtitle">Mobilité Île-de-France</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- Fin du conteneur de texte "À propos" -->
+
+                <div class="about-stats"> <!-- Preuves compactes plus utiles pour un recruteur -->
+                    <div class="stat-card">
+                        <span class="stat-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+                        <span class="stat-number">27+</span>
+                        <span class="stat-label" data-i18n="stats.githubRepos">Repos GitHub</span>
+                        <span class="stat-hint" data-i18n="stats.githubReposHint">Projets techniques publiés</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+                        <span class="stat-number">FR · EN · IT</span>
+                        <span class="stat-label" data-i18n="stats.languages">Langues</span>
+                        <span class="stat-hint" data-i18n="stats.languagesHint">Courant · Professionnel · Notions</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon" aria-hidden="true"><i class="fas fa-briefcase"></i></span>
+                        <span class="stat-number">Sept. 2026</span>
+                        <span class="stat-label" data-i18n="stats.availability">Alternance</span>
+                        <span class="stat-hint" data-i18n="stats.availabilityHint">Disponibilité confirmée</span>
+                    </div>
+
+                    <div class="stat-card stat-card-secondary">
+                        <span class="stat-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label" data-i18n="stats.impressions">Impressions / 7 jours</span>
+                        <span class="stat-hint" data-i18n="stats.impressionsHint">Visibilité de contenu tech</span>
+                    </div>
+                </div> <!-- Fin du conteneur des statistiques -->
+            </div> <!-- Fin du conteneur du contenu "À propos" -->
+        </div> <!-- Fin du conteneur central de la section about -->
+    </section> <!-- Fin de la section about -->
+
+    <!-- ============================================== -->
+    <!-- SECTION 3 : COMPÉTENCES -->
+    <!-- ============================================== -->
+    <section class="skills section-padding" id="skills"> <!-- Section Compétences avec padding -->
+        <div class="container fade-in"> <!-- Conteneur centré avec animation fade-in -->
+            <h2 class="section-title" data-i18n="skills.title">Mes Compétences</h2> <!-- Titre de la section -->
+            <div class="skills-panel"> <!-- Panneau compact premium pour regrouper intro + grille -->
+                <p class="skills-intro" data-i18n="skills.intro">Je privilégie les outils qui transforment un besoin réel en solution concrète : application, automatisation, analyse de données et système connecté.</p> <!-- Intro compacte orientée exécution -->
+
+                <div class="skills-grid"> <!-- Grille compacte contenant uniquement les 4 blocs de compétences clés -->
+
+                    <!-- Bloc 1 : Data & IA -->
+                    <article class="skill-category"> <!-- Carte orientée compétences Data et IA les plus utiles au positionnement cible -->
+                        <div class="skill-header">
+                            <span class="skill-icon-wrap" aria-hidden="true"><i class="fas fa-brain skill-icon"></i></span>
+                            <h3 class="skill-title" data-i18n="skills.categories.dataAi">Data & IA</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag text-only">Python</span>
+                            <span class="skill-tag text-only" data-i18n="skills.tags.pandasNumpy">Pandas/NumPy</span>
+                            <span class="skill-tag text-only">LLM</span>
+                            <span class="skill-tag text-only">RAG</span>
+                            <span class="skill-tag text-only" data-i18n="skills.tags.chatgptApi">ChatGPT API</span>
+                            <span class="skill-tag text-only" data-i18n="skills.tags.aiAutomation">Automatisation IA</span>
+                        </div>
+                    </article>
+
+                    <!-- Bloc 2 : Web & Logiciel -->
+                    <article class="skill-category"> <!-- Carte recentrée sur le web comme support de solutions data / IA -->
+                        <div class="skill-header">
+                            <span class="skill-icon-wrap" aria-hidden="true"><i class="fas fa-code skill-icon"></i></span>
+                            <h3 class="skill-title" data-i18n="skills.categories.webSoftware">Web & Logiciel</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag text-only">HTML/CSS</span>
+                            <span class="skill-tag text-only">JavaScript</span>
+                            <span class="skill-tag text-only">PHP</span>
+                            <span class="skill-tag text-only">React</span>
+                            <span class="skill-tag text-only">WordPress</span>
+                            <span class="skill-tag text-only">Bootstrap</span>
+                        </div>
+                    </article>
+
+                    <!-- Bloc 3 : IoT & Systèmes connectés -->
+                    <article class="skill-category"> <!-- Carte recentrée sur les briques réellement crédibles pour l'IoT -->
+                        <div class="skill-header">
+                            <span class="skill-icon-wrap" aria-hidden="true"><i class="fas fa-microchip skill-icon"></i></span>
+                            <h3 class="skill-title" data-i18n="skills.categories.iotConnected">IoT & Systèmes connectés</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag text-only">Arduino</span>
+                            <span class="skill-tag text-only">LTspice</span>
+                            <span class="skill-tag text-only">Proteus</span>
+                            <span class="skill-tag text-only">Tinkercad</span>
+                            <span class="skill-tag text-only">Fusion</span>
+                            <span class="skill-tag text-only">MQTT</span>
+                        </div>
+                    </article>
+
+                    <!-- Bloc 4 : Outils & Environnements -->
+                    <article class="skill-category"> <!-- Carte synthétique des environnements réellement utiles au delivery -->
+                        <div class="skill-header">
+                            <span class="skill-icon-wrap" aria-hidden="true"><i class="fas fa-tools skill-icon"></i></span>
+                            <h3 class="skill-title" data-i18n="skills.categories.toolsEnvironments">Outils & Environnements</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag text-only">Git/GitHub</span>
+                            <span class="skill-tag text-only">VS Code</span>
+                            <span class="skill-tag text-only">Figma</span>
+                            <span class="skill-tag text-only">Hostinger</span>
+                            <span class="skill-tag text-only">n8n</span>
+                            <span class="skill-tag text-only" data-i18n="skills.tags.googleAiStudio">Google AI Studio</span>
+                        </div>
+                    </article>
+
+                </div> <!-- Fin de la grille des compétences -->
+            </div> <!-- Fin du panneau compétences -->
+        </div> <!-- Fin du conteneur central de la section skills -->
+    </section> <!-- Fin de la section skills -->
+
+    <!-- ============================================== -->
+    <!-- SECTION 4 : PROJETS -->
+    <!-- ============================================== -->
+    <section class="projects section-padding" id="projects"> <!-- Section Projets recentrée sur des études de cas orientées recruteur -->
+        <div class="container fade-in"> <!-- Conteneur centré avec animation fade-in -->
+            <h2 class="section-title" data-i18n="projects.title">Mes Projets</h2> <!-- Titre principal de la section -->
+            <p class="projects-intro" data-i18n="projects.intro">Une sélection de projets concrets en Data, IA, IoT et développement web, présentés sous forme de mini études de cas.</p>
+
+            <div class="timeline"> <!-- Le conteneur timeline est conservé et converti en grille compacte via CSS -->
+
+                <!-- Projet 1 : FinTrack, remonté en tête car le plus aligné avec Data / produit / dashboard -->
+                <div class="timeline-item"> <!-- Carte de projet 1 -->
+                    <div class="timeline-dot"></div> <!-- Repère visuel de timeline -->
+                    <article class="timeline-content project-card"> <!-- La carte reste dans le shell graphique existant -->
+                        <div class="project-carousel" data-carousel tabindex="0" aria-label="Galerie du projet FinTrack" data-i18n-aria-label="projects.fintrack.carouselAria"> <!-- Carousel clavier/souris du projet -->
+                            <div class="project-carousel-viewport"> <!-- Zone d'affichage des slides -->
+                                <!-- Visuel réellement disponible : on garde une seule image propre pour publication -->
+                                <figure class="project-slide" data-carousel-slide> <!-- Slide unique publiée -->
+                                    <img src="assets/images/projects/fintrack.png" alt="Vue principale du projet FinTrack" loading="lazy" decoding="async" width="1200" height="900" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                                <div class="image-placeholder asset-fallback" hidden><span data-i18n="fallbacks.projectVisual">Visuel indisponible</span></div>
+                                </figure>
+                                <!-- Slides retirées temporairement : fintrack-01-dashboard.png, fintrack-02-accueil.png, fintrack-03-github.png -->
+                            </div>
+                            <div class="project-carousel-controls"> <!-- Commandes masquées automatiquement en JS/CSS quand une seule slide reste -->
+                                <button class="project-carousel-btn" type="button" data-carousel-prev aria-label="Image précédente" data-i18n-aria-label="projects.labels.prevImage"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.prevImage">Image précédente</span></button>
+                                <p class="project-carousel-status" data-carousel-status aria-live="polite">1 / 1</p>
+                                <button class="project-carousel-btn" type="button" data-carousel-next aria-label="Image suivante" data-i18n-aria-label="projects.labels.nextImage"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.nextImage">Image suivante</span></button>
+                            </div>
+                        </div>
+                        <div class="project-info"> <!-- Bloc de contenu vendeur du projet -->
+                            <div class="project-header"> <!-- Titre + badge de contexte -->
+                                <div>
+                                    <span class="project-kicker" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                    <h3 class="project-title" data-i18n="projects.fintrack.title">FinTrack — Plateforme de gestion financière personnelle</h3>
+                                </div>
+                                <span class="project-year" data-i18n="projects.fintrack.badge">Prototype</span>
+                            </div>
+                            <div class="project-details"> <!-- Détails structurés pour lecture rapide par un recruteur -->
+                                <p class="project-case-label" data-i18n-html="projects.fintrack.problem"><strong>Problème :</strong> Le suivi des revenus, dépenses et indicateurs financiers devient vite difficile sans interface centralisée et lisible.</p>
+                                <p class="project-case-label" data-i18n-html="projects.fintrack.solution"><strong>Solution :</strong> Application web permettant de centraliser les revenus, dépenses et visualisations via un tableau de bord moderne.</p>
+                                <p class="project-stack" data-i18n-html="projects.fintrack.technologies"><strong>Technologies :</strong> PHP · Bootstrap · Chart.js · JavaScript · XAMPP</p>
+                                <p class="project-case-label" data-i18n-html="projects.fintrack.result"><strong>Résultat :</strong> Prototype fonctionnel de gestion financière personnelle avec visualisation des données et organisation des modules.</p>
+                                <p class="project-case-label" data-i18n-html="projects.fintrack.proof"><strong>Ce que ce projet prouve :</strong> Capacité à construire une application web utile, structurée, orientée données et expérience utilisateur.</p>
+                            </div>
+                            <div class="project-links"> <!-- Aucun faux lien public pour ce projet sensible -->
+                                <span class="project-action-badge project-action-badge-private" data-i18n="projects.labels.privateCode">Code privé</span>
+                                <span class="project-action-badge" data-i18n="projects.labels.demoPreparing">Démo non publique</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Projet 2 : LeMindsetDuTao.com, repositionné comme projet client réel déjà publié -->
+                <div class="timeline-item"> <!-- Carte de projet 2 -->
+                    <div class="timeline-dot"></div> <!-- Repère visuel -->
+                    <article class="timeline-content project-card"> <!-- Carte complète -->
+                        <div class="project-carousel" data-carousel tabindex="0" aria-label="Galerie du projet LeMindsetDuTao.com" data-i18n-aria-label="projects.lemindset.carouselAria"> <!-- Carousel du projet -->
+                            <div class="project-carousel-viewport">
+                                <!-- Aucun visuel local n'est encore présent : on garde un fallback discret et stable -->
+                                <figure class="project-slide" data-carousel-slide>
+                                    <div class="project-visual-fallback" role="img" aria-label="Aperçu du projet LeMindsetDuTao.com" data-i18n-aria-label="projects.lemindset.fallbackAria">
+                                        <i class="fas fa-globe" aria-hidden="true"></i>
+                                        <span data-i18n="projects.lemindset.fallbackLabel">LeMindsetDuTao.com</span>
+                                    </div>
+                                </figure>
+                                <!-- Slides retirées temporairement : lemindsetdutao-01-home.png, lemindsetdutao-02-services.png, lemindsetdutao-03-calendly.png -->
+                            </div>
+                            <div class="project-carousel-controls"> <!-- Commandes masquées automatiquement tant qu'aucune seconde image n'existe -->
+                                <button class="project-carousel-btn" type="button" data-carousel-prev aria-label="Image précédente" data-i18n-aria-label="projects.labels.prevImage"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.prevImage">Image précédente</span></button>
+                                <p class="project-carousel-status" data-carousel-status aria-live="polite">1 / 1</p>
+                                <button class="project-carousel-btn" type="button" data-carousel-next aria-label="Image suivante" data-i18n-aria-label="projects.labels.nextImage"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.nextImage">Image suivante</span></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <div>
+                                    <span class="project-kicker" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                    <h3 class="project-title" data-i18n="projects.lemindset.title">LeMindsetDuTao.com — Site vitrine coaching & bien-être</h3>
+                                </div>
+                                <span class="project-year" data-i18n="projects.lemindset.badge">Site publié</span>
+                            </div>
+                            <div class="project-details">
+                                <p class="project-case-label" data-i18n-html="projects.lemindset.problem"><strong>Problème :</strong> Un coach avait besoin d’une présence professionnelle en ligne pour présenter ses services, formations, consultations et contenus.</p>
+                                <p class="project-case-label" data-i18n-html="projects.lemindset.solution"><strong>Solution :</strong> Création d’un site vitrine structuré avec pages de vente, prise de rendez-vous, contenus, ebook, témoignages et optimisation SEO.</p>
+                                <p class="project-stack" data-i18n-html="projects.lemindset.technologies"><strong>Technologies :</strong> WordPress · Hostinger · UX/UI · SEO · Calendly</p>
+                                <p class="project-case-label" data-i18n-html="projects.lemindset.result"><strong>Résultat :</strong> Site professionnel publié permettant de présenter clairement l’offre, de renforcer la crédibilité et de faciliter la prise de contact.</p>
+                                <p class="project-case-label" data-i18n-html="projects.lemindset.proof"><strong>Ce que ce projet prouve :</strong> Capacité à comprendre un besoin client réel, structurer une offre et livrer une solution web professionnelle.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.lemindsetdutao.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="projects.labels.website">Voir le site</span></a>
+                                <span class="project-action-badge" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Projet 3 : EcoVolt Engineering, projet d'équipe orienté IoT / électronique / gestion -->
+                <div class="timeline-item"> <!-- Carte de projet 3 -->
+                    <div class="timeline-dot"></div> <!-- Repère visuel -->
+                    <article class="timeline-content project-card"> <!-- Carte complète -->
+                        <div class="project-carousel" data-carousel tabindex="0" aria-label="Galerie du projet EcoVolt Engineering" data-i18n-aria-label="projects.ecovolt.carouselAria"> <!-- Carousel du projet -->
+                            <div class="project-carousel-viewport">
+                                <!-- Visuel réellement disponible : on publie l'image projet existante -->
+                                <figure class="project-slide" data-carousel-slide>
+                                    <img src="assets/images/projects/ecovolt-engineering.png" alt="Visuel principal du projet EcoVolt Engineering" loading="lazy" decoding="async" width="1200" height="900" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                                    <div class="image-placeholder asset-fallback" hidden><span data-i18n="fallbacks.projectVisual">Visuel indisponible</span></div>
+                                </figure>
+                                <!-- Slides retirées temporairement : ecovolt-01-ltspice.png, ecovolt-02-gantt.png, ecovolt-03-3d.png -->
+                            </div>
+                            <div class="project-carousel-controls"> <!-- Commandes masquées automatiquement en mode image unique -->
+                                <button class="project-carousel-btn" type="button" data-carousel-prev aria-label="Image précédente" data-i18n-aria-label="projects.labels.prevImage"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.prevImage">Image précédente</span></button>
+                                <p class="project-carousel-status" data-carousel-status aria-live="polite">1 / 1</p>
+                                <button class="project-carousel-btn" type="button" data-carousel-next aria-label="Image suivante" data-i18n-aria-label="projects.labels.nextImage"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.nextImage">Image suivante</span></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <div>
+                                    <span class="project-kicker" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                    <h3 class="project-title" data-i18n="projects.ecovolt.title">EcoVolt Engineering — Chargeur AC/DC 230V→5V/1A</h3>
+                                </div>
+                                <span class="project-year" data-i18n="projects.ecovolt.badge">Projet académique</span>
+                            </div>
+                            <div class="project-details">
+                                <p class="project-case-label" data-i18n-html="projects.ecovolt.problem"><strong>Problème :</strong> Concevoir une alimentation conforme à un cahier des charges technique avec contraintes de sécurité, coût, planification et impact environnemental.</p>
+                                <p class="project-case-label" data-i18n-html="projects.ecovolt.solution"><strong>Solution :</strong> Pilotage d’un projet d’équipe intégrant cycle en V, Gantt, simulations LTspice, modélisation 3D, choix techniques et analyse ACV.</p>
+                                <p class="project-stack" data-i18n-html="projects.ecovolt.technologies"><strong>Technologies :</strong> LTspice · Proteus · Tinkercad · Fusion · Cycle en V · Gantt</p>
+                                <p class="project-case-label" data-i18n-html="projects.ecovolt.result"><strong>Résultat :</strong> Projet académique structuré, réalisé en équipe de 5, avec livrables techniques et organisation de projet.</p>
+                                <p class="project-case-label" data-i18n-html="projects.ecovolt.proof"><strong>Ce que ce projet prouve :</strong> Leadership, gestion de projet technique, compréhension des systèmes électroniques et capacité à coordonner une équipe.</p>
+                            </div>
+                            <div class="project-links">
+                                <span class="project-action-badge" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                <span class="project-action-badge project-action-badge-private" data-i18n="projects.labels.privateCode">Code privé</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Projet 4 : Etudencia, projet publié orienté ressources et UX étudiante -->
+                <div class="timeline-item"> <!-- Carte de projet 4 -->
+                    <div class="timeline-dot"></div> <!-- Repère visuel -->
+                    <article class="timeline-content project-card"> <!-- Carte complète -->
+                        <div class="project-carousel" data-carousel tabindex="0" aria-label="Galerie du projet Etudencia" data-i18n-aria-label="projects.etudencia.carouselAria"> <!-- Carousel du projet -->
+                            <div class="project-carousel-viewport">
+                                <!-- Visuel réellement disponible : on publie l'image projet existante -->
+                                <figure class="project-slide" data-carousel-slide>
+                                    <img src="assets/images/projects/etudencia.png" alt="Visuel principal du projet Etudencia" loading="lazy" decoding="async" width="1200" height="900" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                                    <div class="image-placeholder asset-fallback" hidden><span data-i18n="fallbacks.projectVisual">Visuel indisponible</span></div>
+                                </figure>
+                                <!-- Slides retirées temporairement : etudencia-01-home.png, etudencia-02-page.png, etudencia-03-github.png -->
+                            </div>
+                            <div class="project-carousel-controls"> <!-- Commandes masquées automatiquement en mode image unique -->
+                                <button class="project-carousel-btn" type="button" data-carousel-prev aria-label="Image précédente" data-i18n-aria-label="projects.labels.prevImage"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.prevImage">Image précédente</span></button>
+                                <p class="project-carousel-status" data-carousel-status aria-live="polite">1 / 1</p>
+                                <button class="project-carousel-btn" type="button" data-carousel-next aria-label="Image suivante" data-i18n-aria-label="projects.labels.nextImage"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.nextImage">Image suivante</span></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <div>
+                                    <span class="project-kicker" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                    <h3 class="project-title" data-i18n="projects.etudencia.title">Etudencia — Plateforme de ressources étudiantes</h3>
+                                </div>
+                                <span class="project-year" data-i18n="projects.etudencia.badge">Site publié</span>
+                            </div>
+                            <div class="project-details">
+                                <p class="project-case-label" data-i18n-html="projects.etudencia.problem"><strong>Problème :</strong> Les étudiants ont besoin d’un espace clair pour retrouver des guides, conseils et ressources utiles.</p>
+                                <p class="project-case-label" data-i18n-html="projects.etudencia.solution"><strong>Solution :</strong> Conception d’une plateforme web orientée contenu, orientation et accompagnement étudiant.</p>
+                                <p class="project-stack" data-i18n-html="projects.etudencia.technologies"><strong>Technologies :</strong> TypeScript · Web app · UI/UX · GitHub</p>
+                                <p class="project-case-label" data-i18n-html="projects.etudencia.result"><strong>Résultat :</strong> Site publié et accessible en ligne, pensé pour aider les étudiants à mieux s’orienter et trouver des ressources.</p>
+                                <p class="project-case-label" data-i18n-html="projects.etudencia.proof"><strong>Ce que ce projet prouve :</strong> Capacité à créer une plateforme web utile, orientée utilisateur et contenu.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.etudencia.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="projects.labels.website">Voir le site</span></a>
+                                <span class="project-action-badge project-action-badge-private" data-i18n="projects.labels.privateCode">Code privé</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Projet 5 : EtdIA, prototype IA utile mais sans démo publique propre pour l'instant -->
+                <div class="timeline-item"> <!-- Carte de projet 5 -->
+                    <div class="timeline-dot"></div> <!-- Repère visuel -->
+                    <article class="timeline-content project-card"> <!-- Carte complète -->
+                        <div class="project-carousel" data-carousel tabindex="0" aria-label="Galerie du projet EtdIA" data-i18n-aria-label="projects.etdia.carouselAria"> <!-- Carousel du projet -->
+                            <div class="project-carousel-viewport">
+                                <!-- Aucun visuel local n'est encore présent : on garde un fallback discret et stable -->
+                                <figure class="project-slide" data-carousel-slide>
+                                    <div class="project-visual-fallback" role="img" aria-label="Aperçu du projet EtdIA" data-i18n-aria-label="projects.etdia.fallbackAria">
+                                        <i class="fas fa-robot" aria-hidden="true"></i>
+                                        <span data-i18n="projects.etdia.fallbackLabel">EtdIA</span>
+                                    </div>
+                                </figure>
+                                <!-- Slides retirées temporairement : etdia-01-chatbot.png, etdia-02-interface.png, etdia-03-code.png -->
+                            </div>
+                            <div class="project-carousel-controls"> <!-- Commandes masquées automatiquement tant qu'aucune seconde image n'existe -->
+                                <button class="project-carousel-btn" type="button" data-carousel-prev aria-label="Image précédente" data-i18n-aria-label="projects.labels.prevImage"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.prevImage">Image précédente</span></button>
+                                <p class="project-carousel-status" data-carousel-status aria-live="polite">1 / 1</p>
+                                <button class="project-carousel-btn" type="button" data-carousel-next aria-label="Image suivante" data-i18n-aria-label="projects.labels.nextImage"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.nextImage">Image suivante</span></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <div>
+                                    <span class="project-kicker" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                    <h3 class="project-title" data-i18n="projects.etdia.title">EtdIA — Chatbot d’assistance étudiante</h3>
+                                </div>
+                                <span class="project-year" data-i18n="projects.etdia.badge">Prototype IA</span>
+                            </div>
+                            <div class="project-details">
+                                <p class="project-case-label" data-i18n-html="projects.etdia.problem"><strong>Problème :</strong> Les étudiants perdent du temps à chercher des informations simples dans plusieurs supports.</p>
+                                <p class="project-case-label" data-i18n-html="projects.etdia.solution"><strong>Solution :</strong> Prototype de chatbot web permettant de centraliser l’assistance, les questions fréquentes et l’orientation utilisateur.</p>
+                                <p class="project-stack" data-i18n-html="projects.etdia.technologies"><strong>Technologies :</strong> HTML · CSS · JavaScript · Chatbase · LLM</p>
+                                <p class="project-case-label" data-i18n-html="projects.etdia.result"><strong>Résultat :</strong> Prototype IA permettant d’explorer l’intégration d’un assistant conversationnel dans un contexte étudiant.</p>
+                                <p class="project-case-label" data-i18n-html="projects.etdia.proof"><strong>Ce que ce projet prouve :</strong> Compréhension des usages IA, intégration web et logique d’assistance utilisateur.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Ange-HELPROH/EtdIA" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.labels.githubCode">Code GitHub</span></a>
+                                <span class="project-action-badge" data-i18n="projects.labels.demoPreparing">Démo non publique</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Projet 6 : Jeu Devinette Python, gardé comme fondation algorithmique claire -->
+                <div class="timeline-item"> <!-- Carte de projet 6 -->
+                    <div class="timeline-dot"></div> <!-- Repère visuel -->
+                    <article class="timeline-content project-card project-card-secondary"> <!-- Carte secondaire -->
+                        <div class="project-carousel" data-carousel tabindex="0" aria-label="Galerie du projet Jeu Devinette Python" data-i18n-aria-label="projects.guessingGame.carouselAria"> <!-- Carousel du projet -->
+                            <div class="project-carousel-viewport">
+                                <!-- Aucun visuel local n'est encore présent : on garde un fallback discret et stable -->
+                                <figure class="project-slide" data-carousel-slide>
+                                    <div class="project-visual-fallback" role="img" aria-label="Aperçu du projet Jeu Devinette Python" data-i18n-aria-label="projects.guessingGame.fallbackAria">
+                                        <i class="fas fa-terminal" aria-hidden="true"></i>
+                                        <span data-i18n="projects.guessingGame.fallbackLabel">Jeu Devinette Python</span>
+                                    </div>
+                                </figure>
+                                <!-- Slides retirées temporairement : jeu-devinette-python-01-terminal.png, jeu-devinette-python-02-code.png -->
+                            </div>
+                            <div class="project-carousel-controls"> <!-- Commandes masquées automatiquement tant qu'aucune seconde image n'existe -->
+                                <button class="project-carousel-btn" type="button" data-carousel-prev aria-label="Image précédente" data-i18n-aria-label="projects.labels.prevImage"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.prevImage">Image précédente</span></button>
+                                <p class="project-carousel-status" data-carousel-status aria-live="polite">1 / 1</p>
+                                <button class="project-carousel-btn" type="button" data-carousel-next aria-label="Image suivante" data-i18n-aria-label="projects.labels.nextImage"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr-only" data-i18n="projects.labels.nextImage">Image suivante</span></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <div>
+                                    <span class="project-kicker" data-i18n="projects.labels.caseStudy">Étude de cas</span>
+                                    <h3 class="project-title" data-i18n="projects.guessingGame.title">Jeu Devinette Python — Logique algorithmique</h3>
+                                </div>
+                                <span class="project-year" data-i18n="projects.guessingGame.badge">Python</span>
+                            </div>
+                            <div class="project-details">
+                                <p class="project-case-label" data-i18n-html="projects.guessingGame.problem"><strong>Problème :</strong> Apprendre et pratiquer les bases de la logique algorithmique avec un projet simple et concret.</p>
+                                <p class="project-case-label" data-i18n-html="projects.guessingGame.solution"><strong>Solution :</strong> Création d’un mini-jeu en Python basé sur les conditions, boucles, entrées utilisateur et logique de comparaison.</p>
+                                <p class="project-stack" data-i18n-html="projects.guessingGame.technologies"><strong>Technologies :</strong> Python · Programmation orientée objet · Terminal</p>
+                                <p class="project-case-label" data-i18n-html="projects.guessingGame.result"><strong>Résultat :</strong> Projet simple mais utile pour consolider les bases Python et la structuration du code.</p>
+                                <p class="project-case-label" data-i18n-html="projects.guessingGame.proof"><strong>Ce que ce projet prouve :</strong> Bases solides en algorithmique, raisonnement logique et apprentissage progressif de Python.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Ange-HELPROH/jeu-devinette-python" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.labels.githubCode">Code GitHub</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Projet masqué : HPHBiz retiré de l'affichage final à la demande, sans suppression définitive du code source -->
+                <div class="timeline-item" hidden>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content project-card">
+                        <div class="project-info">
+                            <h3 class="project-title">HPHBiz</h3>
+                            <p class="project-case-label">Projet masqué temporairement.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Fin de la timeline des projets -->
+        </div> <!-- Fin du conteneur central de la section projets -->
+    </section> <!-- Fin de la section projets -->
+
+    <!-- ============================================== -->
+    <!-- SECTION 5 : CERTIFICATIONS -->
+    <!-- ============================================== -->
+    <section class="certifications-section section-padding" id="certifications"> <!-- Les certifications remontent avant les expériences pour être plus visibles -->
+        <div class="container fade-in">
+            <h2 class="section-title" data-i18n="certifications.title">Certifications</h2>
+            <div class="certifications-grid"> <!-- Deux cartes visibles, avec image réelle ou fallback si le fichier manque -->
+
+                <!-- Certification 1 : IA générative -->
+                <article class="certification-card"> <!-- Carte certification détaillée et plus crédible qu'un simple badge -->
+                    <div class="certification-image"> <!-- Zone image du certificat -->
+                        <img src="assets/images/certificates/cert-ia-generative.png" alt="Certificat LinkedIn Learning Découvrir l’IA générative" loading="lazy" decoding="async" width="1200" height="900" data-i18n-alt="alts.certGenerativeAi" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                        <div class="image-placeholder asset-fallback" hidden><span data-i18n="fallbacks.certificateVisual">Visuel indisponible</span></div>
+                    </div>
+                    <div class="certification-content"> <!-- Contenu textuel de la carte -->
+                        <span class="certification-kicker" data-i18n="certifications.labels.onlineLearning">Formation en ligne</span>
+                        <h3 class="certification-title" data-i18n="certifications.generativeAi.name">Découvrir l’IA générative</h3>
+                        <p class="certification-issuer" data-i18n="certifications.generativeAi.issuer">LinkedIn Learning</p>
+                        <p class="certification-description" data-i18n="certifications.generativeAi.description">Formation suivie pour structurer les bases de l’IA générative, comprendre ses usages et mieux l’intégrer dans des projets concrets.</p>
+                        <a href="https://www.linkedin.com/learning/certificates/849f143caab52109ae4b1e7e2794d2eafde2a407134fc74d05cbd39465031d60?integrationType=lilApp" target="_blank" rel="noopener noreferrer" class="btn btn-outline certification-link"><i class="fas fa-certificate" aria-hidden="true"></i> <span data-i18n="certifications.labels.viewCertificate">Voir le certificat</span></a>
+                    </div>
+                </article>
+
+                <!-- Certification 2 : IoT -->
+                <article class="certification-card"> <!-- Carte certification détaillée et cohérente avec le positionnement IoT -->
+                    <div class="certification-image">
+                        <img src="assets/images/certificates/cert-iot.png" alt="Certificat LinkedIn Learning Les fondements de l’IoT" loading="lazy" decoding="async" width="1200" height="900" data-i18n-alt="alts.certIot" onerror="this.onerror=null; this.hidden=true; this.nextElementSibling.hidden=false;">
+                        <div class="image-placeholder asset-fallback" hidden><span data-i18n="fallbacks.certificateVisual">Visuel indisponible</span></div>
+                    </div>
+                    <div class="certification-content">
+                        <span class="certification-kicker" data-i18n="certifications.labels.onlineLearning">Formation en ligne</span>
+                        <h3 class="certification-title" data-i18n="certifications.iot.name">Les fondements de l’IoT</h3>
+                        <p class="certification-issuer" data-i18n="certifications.iot.issuer">LinkedIn Learning</p>
+                        <p class="certification-description" data-i18n="certifications.iot.description">Formation suivie pour renforcer la compréhension de l’architecture des objets connectés, de la transmission des données et des usages IoT.</p>
+                        <a href="https://www.linkedin.com/learning/certificates/6954e3675add2af9d658536b9e768705e209bc07b96821f886abe8fac695bbe9?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="btn btn-outline certification-link"><i class="fas fa-certificate" aria-hidden="true"></i> <span data-i18n="certifications.labels.viewCertificate">Voir le certificat</span></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 6 : EXPÉRIENCES -->
+    <!-- ============================================== -->
+    <section class="experiences section-padding" id="experiences"> <!-- Section expériences compacte et orientée crédibilité recrutement -->
+        <div class="container fade-in">
+            <h2 class="section-title" data-i18n="experiences.title">Mes Expériences</h2>
+            <div class="experiences-grid"> <!-- Trois cartes au lieu d'une longue timeline pour améliorer la lisibilité -->
+
+                <!-- Expérience 1 : Numéro 1 Scolarité -->
+                <article class="experience-card"> <!-- Carte expérience 1 -->
+                    <div class="experience-card-header">
+                        <span class="experience-kicker" data-i18n="experiences.labels.teaching">Transmission</span>
+                        <h3 class="exp-title" data-i18n="experiences.teaching.title">Étudiant enseignant — Numéro 1 Scolarité</h3>
+                    </div>
+                    <p class="exp-desc" data-i18n="experiences.teaching.description">Accompagnement d’élèves en mathématiques, physique, chimie, français et informatique. Adaptation des explications au niveau de chaque élève, avec une approche claire, structurée et pédagogique.</p>
+                    <div class="experience-proofs">
+                        <span class="experience-proof" data-i18n="experiences.teaching.proofs.pedagogy">Pédagogie</span>
+                        <span class="experience-proof" data-i18n="experiences.teaching.proofs.organization">Organisation</span>
+                        <span class="experience-proof" data-i18n="experiences.teaching.proofs.transmission">Transmission</span>
+                    </div>
+                </article>
+
+                <!-- Expérience 2 : LinkedIn -->
+                <article class="experience-card"> <!-- Carte expérience 2 -->
+                    <div class="experience-card-header">
+                        <span class="experience-kicker" data-i18n="experiences.labels.visibility">Veille & contenu</span>
+                        <h3 class="exp-title" data-i18n="experiences.contentCreator.title">Créateur de contenu Tech — LinkedIn</h3>
+                    </div>
+                    <p class="exp-desc" data-i18n="experiences.contentCreator.description">Publication de contenus pédagogiques sur la Data, l’IA, l’IoT et la carrière tech. Cette activité montre ma capacité à vulgariser, structurer des idées et maintenir une veille active.</p>
+                    <div class="experience-stats"> <!-- Statistiques visibles pour objectiver l'activité LinkedIn -->
+                        <span class="experience-stat"><strong>760</strong> <span data-i18n="experiences.contentCreator.stats.followers">abonnés</span></span>
+                        <span class="experience-stat"><strong>500+</strong> <span data-i18n="experiences.contentCreator.stats.connections">relations</span></span>
+                        <span class="experience-stat"><strong data-i18n="experiences.contentCreator.stats.monitoringValue">Veille</strong> <span data-i18n="experiences.contentCreator.stats.monitoring">tech</span></span>
+                    </div>
+                </article>
+
+                <!-- Expérience 3 : EcoVolt -->
+                <article class="experience-card"> <!-- Carte expérience 3 -->
+                    <div class="experience-card-header">
+                        <span class="experience-kicker" data-i18n="experiences.labels.project">Projet technique</span>
+                        <h3 class="exp-title" data-i18n="experiences.ecovolt.title">Chef de projet — EcoVolt Engineering</h3>
+                    </div>
+                    <p class="exp-desc" data-i18n="experiences.ecovolt.description">Coordination d’une équipe de 5 étudiants sur un projet de chargeur AC/DC 230V→5V/1A. Suivi du cahier des charges, cycle en V, Gantt, simulations et livrables techniques.</p>
+                    <div class="experience-proofs">
+                        <span class="experience-proof" data-i18n="experiences.ecovolt.proofs.team">Équipe de 5</span>
+                        <span class="experience-proof" data-i18n="experiences.ecovolt.proofs.vcycle">Cycle en V</span>
+                        <span class="experience-proof" data-i18n="experiences.ecovolt.proofs.ltspice">LTspice</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 6 : CONTACT -->
+    <!-- ============================================== -->
+    <section class="contact section-padding" id="contact"> <!-- Section Contact -->
+        <div class="container fade-in"> <!-- Conteneur centré avec animation fade-in -->
+            <h2 class="section-title" data-i18n="contact.title">Me contacter</h2> <!-- Titre principal de la section -->
+
+            <div class="contact-wrapper"> <!-- Conteneur flex pour organiser les infos et le formulaire côte à côte -->
+
+                <div class="contact-info"> <!-- Conteneur pour les informations de contact directes -->
+                    <h3 class="contact-subtitle" data-i18n="contact.subtitle">Échangeons sur une alternance, un projet ou une collaboration.</h3>
+                    <!-- Sous-titre pour inviter au contact -->
+                    <p class="contact-text" data-i18n="contact.text">Vous pouvez me contacter par e-mail, LinkedIn, GitHub ou via le formulaire ci-dessous. Je suis disponible pour une alternance en Data, IA, IoT ou développement logiciel à partir de septembre 2026.</p> <!-- Texte d'invitation orienté recruteur -->
+
+                    <ul class="contact-list"> <!-- Liste de liens directs utiles et réellement exploitables -->
+                        <li>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div class="contact-item-content">
+                                <span class="contact-label" data-i18n="contact.labels.email">E-mail</span>
+                                <a href="mailto:angeteufackjunior@gmail.com">angeteufackjunior@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <div class="contact-item-content">
+                                <span class="contact-label" data-i18n="contact.labels.linkedin">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/teufack-ange-junior" target="_blank" rel="noopener noreferrer">linkedin.com/in/teufack-ange-junior</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <div class="contact-item-content">
+                                <span class="contact-label" data-i18n="contact.labels.github">GitHub</span>
+                                <a href="https://github.com/Ange-HELPROH" target="_blank" rel="noopener noreferrer">github.com/Ange-HELPROH</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-link" aria-hidden="true"></i>
+                            <div class="contact-item-content">
+                                <span class="contact-label" data-i18n="contact.labels.linktree">Linktree</span>
+                                <a href="https://linktr.ee/helprohtechdev" target="_blank" rel="noopener noreferrer">linktr.ee/helprohtechdev</a>
+                            </div>
+                        </li>
+                    </ul> <!-- Fin de la liste des moyens de contact -->
+
+                    <a href="assets/cv/CV_Ange_Teufack_2026.pdf" class="btn btn-outline contact-cv-btn" target="_blank" rel="noopener noreferrer"> <!-- Bouton CV gardé visible dans la colonne contact -->
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i> <span data-i18n="contact.cvButton">Télécharger mon CV PDF</span>
+                    </a>
+                </div> <!-- Fin des informations de contact directes -->
+
+                <div class="contact-form-container"> <!-- Conteneur pour le formulaire de contact -->
+                    <form class="contact-form" id="contact-form" action="mailto:angeteufackjunior@gmail.com" method="GET" enctype="text/plain">
+                        <!-- Formulaire statique configuré en mode mailto pour éviter un faux backend -->
+                        <div class="form-group"> <!-- Groupe de formulaire pour le Nom -->
+                            <label for="name" data-i18n="form.nameLabel">Nom complet</label> <!-- Étiquette pour le champ Nom -->
+                            <input type="text" id="name" name="name" required minlength="2" autocomplete="name" placeholder="Votre nom et prénom" data-i18n-placeholder="form.namePlaceholder">
+                            <!-- Champ de saisie texte obligatoire pour le Nom avec aide et validation simple -->
+                        </div> <!-- Fin du groupe Nom -->
+
+                        <div class="form-group"> <!-- Groupe de formulaire pour l'Email -->
+                            <label for="email" data-i18n="form.emailLabel">Adresse e-mail</label> <!-- Étiquette pour le champ Email -->
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="votre@email.com" data-i18n-placeholder="form.emailPlaceholder">
+                            <!-- Champ de saisie email obligatoire pour l'Email avec validation native du navigateur -->
+                        </div> <!-- Fin du groupe Email -->
+
+                        <div class="form-group"> <!-- Groupe de formulaire pour le Message -->
+                            <label for="message" data-i18n="form.messageLabel">Message</label> <!-- Étiquette pour la zone de texte Message -->
+                            <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Décrivez brièvement votre besoin, votre projet ou votre opportunité..." data-i18n-placeholder="form.messagePlaceholder"></textarea>
+                            <!-- Zone de texte obligatoire pour le Message avec longueur minimale pour éviter les messages trop vides -->
+                        </div> <!-- Fin du groupe Message -->
+
+                        <p class="form-status" id="form-status" role="status" aria-live="polite" data-i18n="form.statusIdle"></p>
+                        <!-- Zone de retour utilisateur accessible, utilisée à la place d'une simple alerte JavaScript -->
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <!-- Bouton de soumission du formulaire -->
+                            <span data-i18n="form.submit">Envoyer le message</span> <i class="fas fa-paper-plane"></i>
+                            <!-- Texte du bouton et icône avion en papier -->
+                        </button> <!-- Fin du bouton de soumission -->
+                    </form> <!-- Fin du formulaire -->
+                </div> <!-- Fin du conteneur du formulaire -->
+
+            </div> <!-- Fin du conteneur flex wrapper -->
+        </div> <!-- Fin du conteneur central de la section contact -->
+    </section> <!-- Fin de la section contact -->
+
+    <!-- ============================================== -->
+    <!-- PIED DE PAGE (FOOTER) -->
+    <!-- ============================================== -->
+    <footer class="footer"> <!-- Balise footer pour la zone du pied de page -->
+        <div class="container footer-container"> <!-- Conteneur centré du pied de page -->
+
+            <div class="footer-socials"> <!-- Conteneur pour les icônes de réseaux sociaux dans le pied de page -->
+                <a href="https://www.linkedin.com/in/teufack-ange-junior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a> <!-- Lien externe vers LinkedIn -->
+                <a href="https://github.com/Ange-HELPROH" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a> <!-- Lien externe vers GitHub -->
+                <a href="mailto:angeteufackjunior@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <!-- Lien mailto pour envoyer un email -->
+            </div> <!-- Fin du conteneur des icônes sociales footer -->
+
+            <p class="footer-copyright" data-i18n="footer.copyright">Conçu et développé par Ange Teufack &copy; 2026</p>
+            <!-- Mention de droits d'auteur et nom -->
+            <p class="footer-tech" data-i18n="footer.tech">Fait avec HTML · CSS · JS · GitHub Pages</p>
+            <!-- Technologies utilisées mentionnées en bas de page -->
+
+        </div> <!-- Fin du conteneur central du pied de page -->
+    </footer> <!-- Fin du pied de page -->
+
+    <!-- Importation du fichier JavaScript principal -->
+    <script src="js/main.js" defer></script>
+    <!-- Lien vers le script JS contenant les interactions de la page (animations, menu mobile...) -->
+
+</body> <!-- Fin du corps du document -->
+
+</html> <!-- Fin de la balise html racine -->
+
+
+
+
