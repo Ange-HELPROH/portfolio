@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 languagesHint: "Courant · Professionnel · Notions",
                 availability: "Alternance",
                 availabilityHint: "Disponibilité confirmée",
-                impressions: "Impressions / 7 jours",
-                impressionsHint: "Visibilité de contenu tech"
+                projects: "Projets",
+                projectsHint: "Réalisés en équipe et en solo"
             },
             skills: {
                 title: "Mes Compétences",
@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projects: {
                 title: "Mes Projets",
                 intro: "Une sélection de projets concrets en Data, IA, IoT et développement web, présentés sous forme de mini études de cas.",
+                hiddenTemporary: "Projet masqué temporairement.",
                 labels: {
                     githubCode: "Code GitHub",
                     website: "Voir le site",
@@ -216,8 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     title: "Créateur de contenu Tech — LinkedIn",
                     description: "Publication de contenus pédagogiques sur la Data, l’IA, l’IoT et la carrière tech. Cette activité montre ma capacité à vulgariser, structurer des idées et maintenir une veille active.",
                     stats: {
-                        followers: "abonnés",
-                        connections: "relations",
+                        writing: "Rédaction",
+                        popularization: "Vulgarisation",
                         monitoringValue: "Veille",
                         monitoring: "tech"
                     }
@@ -339,8 +340,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 projects: "Projects",
                 skills: "Skills",
                 experiences: "Experience",
-                certifications: "Certifications",
-                contact: "Contact"
+                certifications: "Certificates",
+                contact: "Get in touch"
             },
             hero: {
                 firstName: "Ange",
@@ -357,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 badgeRhythm: "1 week at school / 3 weeks in company",
                 badgeDate: "September 2026",
                 badgeLanguages: "FR \u00b7 EN \u00b7 IT",
-                badgeLocation: "Herblay 95220 \u00b7 Val-d\u2019Oise \u00b7 \u00cele-de-France",
+                badgeLocation: "Herblay 95220 \u00b7 Val-d\u2019Oise \u00b7 Greater Paris Region",
                 opportunity: "Available for a work-study program from September 2026, with an adaptable school / company rhythm depending on the academic calendar.",
                 ctaProjects: "View my projects",
                 ctaCv: "Download my CV"
@@ -366,14 +367,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "About me",
                 paragraph1: "Engineering student at ECAM-EPMI, I specialize in Data Science, Artificial Intelligence and IoT. I build practical projects combining data analysis, automation, web applications and connected systems.",
                 paragraph2: "I am looking for a work-study program from September 2026 to contribute to practical projects in Data, AI or IoT, with a preferred rhythm of 1 week at school / 3 weeks in company.",
-                paragraph3: "Based in Herblay (95220), Val-d’Oise, I am mobile across Île-de-France.",
+                paragraph3: "Based in Herblay (95220), Val-d\u2019Oise, I am mobile across the Greater Paris Region.",
                 proofsAria: "Key profile highlights",
                 proof1Title: "ECAM-EPMI engineering student",
                 proof1Subtitle: "Data Science, AI & IoT track",
                 proof2Title: "Work-study search – Sept. 2026",
                 proof2Subtitle: "Preferred rhythm: 1 week at school / 3 weeks in company",
                 proof3Title: "Herblay 95220 · Val-d’Oise",
-                proof3Subtitle: "Île-de-France mobility"
+                proof3Subtitle: "Greater Paris Region mobility"
             },
             stats: {
                 githubRepos: "GitHub repos",
@@ -382,8 +383,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 languagesHint: "Fluent · Professional · Working knowledge",
                 availability: "Work-study",
                 availabilityHint: "Availability confirmed",
-                impressions: "Impressions / 7 days",
-                impressionsHint: "Tech content visibility"
+                projects: "Projects",
+                projectsHint: "Delivered in team and solo settings"
             },
             skills: {
                 title: "My Skills",
@@ -404,6 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projects: {
                 title: "My Projects",
                 intro: "A selection of concrete projects in Data, AI, IoT and web development, presented as compact case studies.",
+                hiddenTemporary: "Project temporarily hidden.",
                 labels: {
                     githubCode: "GitHub code",
                     website: "Visit website",
@@ -509,15 +511,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     title: "Tech content creator — LinkedIn",
                     description: "Publication of educational content about Data, AI, IoT and tech careers. This activity shows my ability to explain concepts clearly, structure ideas and maintain active monitoring.",
                     stats: {
-                        followers: "followers",
-                        connections: "connections",
+                        writing: "Writing",
+                        popularization: "Simplification",
                         monitoringValue: "Tech",
                         monitoring: "monitoring"
                     }
                 }
             },
             certifications: {
-                title: "Certifications",
+                title: "Certificates",
                 labels: {
                     onlineLearning: "Online course",
                     viewCertificate: "View certificate"
@@ -562,7 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 emailLabel: "Email address",
                 emailPlaceholder: "your@email.com",
                 emailHelp: "Required field. Use a valid email address.",
-                messageLabel: "Message",
+                messageLabel: "Your message",
                 messagePlaceholder: "Briefly describe your need, project or opportunity...",
                 messageHelp: "Required field. Briefly describe your need or project.",
                 statusIdle: "",
@@ -574,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mailIntro: "I am contacting you from your portfolio.",
                 mailBodyName: "Name",
                 mailBodyEmail: "Email",
-                mailBodyMessage: "Message",
+                mailBodyMessage: "Your message",
                 mailClosing: "Best regards"
             },
             fallbacks: {

@@ -1049,7 +1049,7 @@ span.skill-tag.text-only { /* Style spécifique pour les tags qui ne sont que du
 
     /* Ajustements pour les petites grilles sur mobile */
     .about-stats { 
-        flex-direction: column; /* Ré-empile verticalement les 3 cartes de statistiques (Repos, Relations...) (elles étaient en ligne sur tablette) */
+        flex-direction: column; /* Ré-empile verticalement les cartes de statistiques (elles étaient en ligne sur tablette) */
     }
 
     .skills-grid { 
@@ -4270,3 +4270,4 @@ body.light-theme .form-group textarea::placeholder {
         pointer-events: auto;
     }
 }
+
