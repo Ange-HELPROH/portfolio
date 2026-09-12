@@ -62,8 +62,8 @@ export const portfolioData = {
     title: "Étudiant Data Science, IA & Développement Web",
     catchphrase: "Je conçois des applications intelligentes de la base de données jusqu'à l'interface utilisateur. Problem solver avant tout, je transforme les besoins complexes en solutions concrètes.",
     location: "Herblay 95220, Val-d'Oise",
-    availability: "Disponible pour une alternance (Rythme adaptable) - Sept. 2026",
-    languages: "FR · EN · IT",
+    availability: "Disponible pour une alternance (4 jours entreprise / 1 jour école) - Sept. 2026",
+    languages: "Français (Langue maternelle), Anglais (Intermédiaire, B2), Italien (Notions, A2)",
     github: "https://github.com/Ange-HELPROH",
     linkedin: "https://www.linkedin.com/in/ange-teufack/",
   },
@@ -75,7 +75,7 @@ export const portfolioData = {
       id: 1,
       school: "ÉSTIAM",
       degree: "Bac+3, DAD (Data et App Design), Parcours 6",
-      date: "En cours",
+      date: "2026 - en cours...",
       status: "Actuel"
     },
     {
@@ -89,27 +89,35 @@ export const portfolioData = {
   experiences: [
     {
       id: 1,
-      role: "Créateur de Produit & Contenu Tech",
-      company: "HelprohTechDev",
-      date: "2025",
-      description: "Création et développement du projet personnel HELPROH (écosystème d'apprentissage tech) et du produit IA AIProh, en cours de développement actif. Création de contenu pédagogique Data/IA/IoT sur LinkedIn, TikTok, YouTube, Instagram, Threads.",
-      tags: ["Développement Web", "IA Générative", "Gestion de Produit"]
+      role: "Obtention du Baccalauréat",
+      company: "Lycée [À compléter]",
+      date: "[À compléter]",
+      description: "Obtention du baccalauréat.",
+      tags: ["Baccalauréat"]
     },
     {
       id: 2,
-      role: "Chef de Projet Technique",
-      company: "EcoVolt Engineering",
-      date: "Année scolaire 2025-2026",
-      description: "Projet mené en équipe de 5 étudiants à l'ECAM-EPMI, sous la direction de M. Moncef Benkherrat. Rôle : chef de projet — coordination de l'équipe, animation des réunions hebdomadaires, structuration du planning, cohérence des livrables. Équipe : Ange Teufack (chef de projet), Ghita Filali, Maroua Sodor, Benoîte Mbemba, Ayoub Mecceded. Domaines couverts : gestion de projet (cahier des charges, cycle en V, Gantt), électronique (architecture AC/DC, simulations LTspice, conception PCB), mécanique (modélisation 3D, boîtier), économie (fournisseurs, coûts/délais), environnement (ACV, impact carbone).",
-      tags: ["Leadership", "Gestion de Projet", "Électronique", "Cycle en V"]
+      role: "Cycle préparatoire intégré",
+      company: "ECAM-EPMI",
+      date: "octobre 2024 - juin 2026",
+      description: "Cycle préparatoire à l'école d'ingénieurs ECAM-EPMI. En parallèle de ce cursus scientifique généraliste, j'ai commencé à développer mon activité de contenu HelprohTechDev (création de ressources pédagogiques en Data, IA et IoT) et assuré des cours de soutien (tutorat académique en mathématiques, physique et informatique).",
+      tags: ["Mathématiques", "Physique", "Tutorat", "Création de contenu"]
     },
     {
       id: 3,
-      role: "Tuteur Académique",
-      company: "Numéro 1 Scolarité & Indépendant",
-      date: "avril 2025 – aujourd'hui",
-      description: "Accompagnement d'élèves en mathématiques, physique et informatique. Capacité à vulgariser et simplifier des concepts algorithmiques et scientifiques complexes.",
-      tags: ["Pédagogie", "Communication", "Transmission"]
+      role: "Chef de Projet Technique",
+      company: "EcoVolt Engineering (ECAM-EPMI)",
+      date: "Année scolaire 2025-2026",
+      description: "Projet d'ingénierie mené en équipe de 5 étudiants. En tant que chef de projet, j'ai coordonné l'équipe, animé les réunions et structuré le planning (cycle en V, diagramme de Gantt). Le projet couvrait des domaines variés : électronique (architecture AC/DC, simulations LTspice, conception PCB), mécanique (modélisation 3D), économie (coûts/délais) et environnement (analyse du cycle de vie, impact carbone).",
+      tags: ["Leadership", "Gestion de Projet", "Électronique", "Cycle en V"]
+    },
+    {
+      id: 4,
+      role: "Bac+3 DAD (Data et App Design)",
+      company: "ÉSTIAM",
+      date: "2026 - en cours...",
+      description: "Transition vers l'ÉSTIAM (Parcours 6) pour me spécialiser dans mes domaines de prédilection : la Data Science, l'Intelligence Artificielle et le Développement Web. L'objectif de ce cursus est de concevoir des architectures de données pérennes et de développer des applications intelligentes capables d'intégrer des modèles d'IA générative.",
+      tags: ["Data Science", "Intelligence Artificielle", "Développement Web"]
     }
   ] as Experience[],
   skills: [

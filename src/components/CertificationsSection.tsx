@@ -9,9 +9,9 @@ export default function CertificationsSection() {
         {/* En-tête */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            Mes <span className="text-blue-500">Certifications</span>
+            Mes Certifications
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-8"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Formations certifiantes validant mon expertise technique en IA et IoT.
           </p>
@@ -30,7 +30,7 @@ export default function CertificationsSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute top-3 left-3 bg-white/90 dark:bg-black/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-bold text-purple-600 dark:text-purple-400 border border-purple-100 dark:border-purple-900/50 shadow-sm flex items-center gap-1 uppercase tracking-wide">
+                <div className="absolute top-3 left-3 bg-white/90 dark:bg-black/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-bold text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center gap-1 uppercase tracking-wide">
                   <Award size={12} /> Formation en ligne
                 </div>
               </div>

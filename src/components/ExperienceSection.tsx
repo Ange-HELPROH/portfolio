@@ -11,7 +11,7 @@ export default function ExperienceSection() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
             Mon <span className="text-blue-500">Parcours</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-8"></div>
         </div>
 
         {/* Timeline */}
@@ -20,11 +20,7 @@ export default function ExperienceSection() {
             <div key={exp.id} className="relative pl-8 md:pl-12">
               
               {/* Icône de la timeline */}
-              <div className={`absolute -left-[17px] top-0 w-8 h-8 rounded-full flex items-center justify-center border-4 border-gray-50 dark:border-[#0D0D1A] ${
-                exp.company === "HelprohTechDev"
-                  ? 'bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-lg shadow-purple-500/30' 
-                  : 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-              }`}>
+              <div className="absolute -left-[17px] top-0 w-8 h-8 rounded-full flex items-center justify-center border-4 border-gray-50 dark:border-[#0D0D1A] bg-blue-600 text-white">
                 {exp.company === "HelprohTechDev" ? <Briefcase size={14} /> : <GraduationCap size={14} />}
               </div>
 
