@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Send, CheckCircle, AlertCircle, Loader2, Copy, Check, Mail, Phone, Download } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Loader2, Copy, Check, Mail, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { portfolioData } from '../data/portfolioData';
 
@@ -99,20 +99,7 @@ export default function ContactSection() {
                   </button>
                 </div>
                 
-                <div className="flex items-center justify-between p-3 bg-white dark:bg-[#0D0D1A] rounded-lg border border-gray-200 dark:border-gray-800 group hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
-                  <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-                    <Phone size={18} className="text-blue-500" />
-                    <span className="font-medium text-sm md:text-base">[À compléter : +33 6 XX XX XX XX]</span>
-                  </div>
-                  <button 
-                    onClick={() => handleCopy('+33 6 00 00 00 00', 'phone')}
-                    className="p-2 text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
-                    aria-label="Copier le téléphone"
-                    title="Copier le téléphone"
-                  >
-                    {copiedField === 'phone' ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
-                  </button>
-                </div>
+
               </div>
             </div>
 
