@@ -197,7 +197,7 @@ export const portfolioData = {
       problem: "Le suivi des revenus, dépenses et indicateurs financiers devient vite difficile sans interface centralisée et lisible.",
       solution: "Application web développée en équipe de 5 étudiants (contributeurs : Ayoub, Maroua et 1 autre) permettant le suivi des revenus/dépenses, visualisation via graphiques dynamiques, export de rapports en PDF.",
       technologies: ["PHP", "Bootstrap", "Chart.js", "JavaScript", "XAMPP"],
-      images: ["fintrack.webp"],
+      images: ["fintrack.png"],
       links: {
         status: "Code privé, Démo non publique"
       },
@@ -227,7 +227,7 @@ export const portfolioData = {
       problem: "Les étudiants étrangers souhaitant faire leurs études en France font face à des démarches administratives et académiques complexes.",
       solution: "Plateforme de conseil et d'orientation développée par mes soins, centralisant l'accompagnement Campus France (dossier, choix des universités, préparation aux entretiens), le soutien académique, et des ressources en ligne (guides, FAQ, centre d'aide).",
       technologies: ["TypeScript", "Web app", "UI/UX", "GitHub"],
-      images: ["etudencia.webp"],
+      images: ["etudencia.png"],
       links: {
         demo: "https://www.etudencia.com/",
         status: "Site publié"

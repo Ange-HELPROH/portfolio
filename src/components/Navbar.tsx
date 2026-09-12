@@ -56,7 +56,7 @@ export default function Navbar() {
               </button>
 
               <a
-                href="/assets/cv/CV_Ange_Teufack.pdf"
+                href={`${import.meta.env.BASE_URL}assets/cv/CV%20-%20Alternance%20Data%20Science%20et%20IA%202026%20-%20Ange%20Teufack.pdf`}
                 className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
               >
                 <Download size={18} />
@@ -91,7 +91,7 @@ export default function Navbar() {
             <a href="#projects" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Projets</a>
             <a href="#contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
             <a
-              href="/assets/cv/CV_Ange_Teufack.pdf"
+              href={`${import.meta.env.BASE_URL}assets/cv/CV%20-%20Alternance%20Data%20Science%20et%20IA%202026%20-%20Ange%20Teufack.pdf`}
               className="mt-4 flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium"
             >
               <Download size={18} />
