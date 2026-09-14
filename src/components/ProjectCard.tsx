@@ -49,8 +49,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   // Carousel State
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
-  const [isHovered, setIsHovered] = useState(false);
-  const autoPlayTimer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [isPausedAfterManualAction, setIsPausedAfterManualAction] = useState(false);
   const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const imagesCount = hasImages ? project.images.length : 1;
@@ -67,39 +66,32 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   const handleManualInteraction = (dir: 'left' | 'right') => {
     setDirection(dir);
-    if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
     if (idleTimer.current) clearTimeout(idleTimer.current);
-    
-    // Pause auto-play for 10s after manual interaction
+    setIsPausedAfterManualAction(true);
+
+    // Pause auto-play for 10 seconds after every manual action.
     idleTimer.current = setTimeout(() => {
-      startAutoPlay();
+      setIsPausedAfterManualAction(false);
     }, 10000);
   };
 
-  const startAutoPlay = () => {
-    if (imagesCount <= 1) return;
-    if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
-    
-    autoPlayTimer.current = setInterval(() => {
-      if (direction === 'right') {
-        setCurrentSlide((prev) => (prev + 1) % imagesCount);
-      } else {
-        setCurrentSlide((prev) => (prev - 1 + imagesCount) % imagesCount);
-      }
-    }, 3000);
-  };
-
   useEffect(() => {
-    if (!isHovered) {
-      startAutoPlay();
-    } else {
-      if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
-    }
+    if (imagesCount <= 1 || isPausedAfterManualAction) return;
+
+    const autoPlayTimer = window.setInterval(() => {
+      setCurrentSlide((prev) => direction === 'right'
+        ? (prev + 1) % imagesCount
+        : (prev - 1 + imagesCount) % imagesCount);
+    }, 3000);
+
     return () => {
-      if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
-      if (idleTimer.current) clearTimeout(idleTimer.current);
+      window.clearInterval(autoPlayTimer);
     };
-  }, [isHovered, direction, imagesCount]);
+  }, [direction, imagesCount, isPausedAfterManualAction]);
+
+  useEffect(() => () => {
+    if (idleTimer.current) clearTimeout(idleTimer.current);
+  }, []);
 
 
   return (
@@ -107,9 +99,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       
       {/* Image Carousel Container */}
       <div 
-        className="relative h-48 sm:h-56 overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0"
       >
         {hasImages ? (
           <>
@@ -122,7 +112,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   <img 
                     src={`${import.meta.env.BASE_URL}assets/images/projects/${img.replace(/^\//, '')}`} 
                     alt={`Aperçu ${idx + 1} du projet ${project.title}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     loading="lazy"
                   />
                 </div>
@@ -134,30 +124,36 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <>
                 <button 
                   onClick={(e) => { e.preventDefault(); prevSlide(true); }}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 hover:bg-black/80 focus-visible:bg-black/80 text-white flex items-center justify-center transition-colors shadow-md"
                   aria-label="Image précédente"
                 >
                   <ChevronLeft size={18} />
                 </button>
                 <button 
                   onClick={(e) => { e.preventDefault(); nextSlide(true); }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 hover:bg-black/80 focus-visible:bg-black/80 text-white flex items-center justify-center transition-colors shadow-md"
                   aria-label="Image suivante"
                 >
                   <ChevronRight size={18} />
                 </button>
                 
                 {/* Dots indicator */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                  {project.images.map((_, idx) => (
-                    <div 
-                      key={idx}
-                      className={`h-1.5 rounded-full transition-all ${
-                        currentSlide === idx ? 'w-4 bg-blue-500' : 'w-1.5 bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
+                {imagesCount > 7 ? (
+                  <p className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/65 px-2.5 py-1 text-xs font-semibold text-white" aria-live="polite">
+                    {currentSlide + 1} / {imagesCount}
+                  </p>
+                ) : (
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5" aria-label={`Image ${currentSlide + 1} sur ${imagesCount}`}>
+                    {project.images.map((_, idx) => (
+                      <span
+                        key={idx}
+                        className={`h-1.5 rounded-full transition-all ${
+                          currentSlide === idx ? 'w-4 bg-blue-500' : 'w-1.5 bg-white/50'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
               </>
             )}
           </>

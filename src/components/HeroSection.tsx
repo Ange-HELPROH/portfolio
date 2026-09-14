@@ -43,8 +43,10 @@ export default function HeroSection() {
         <div className="flex-1 flex flex-col items-center lg:items-end z-10 w-full max-w-sm lg:max-w-none gap-6 mt-8 lg:mt-0">
           
           <div className="hidden md:block relative w-48 h-48 sm:w-56 sm:h-56 lg:w-[280px] lg:h-[280px] shrink-0">
+            <div aria-hidden="true" className="hidden lg:block absolute -inset-7 rounded-full border-2 border-blue-500/75 bg-blue-600/10 shadow-[0_0_28px_8px_rgba(37,99,235,0.38)]" />
+            <div aria-hidden="true" className="hidden lg:block absolute -inset-3 rounded-full border border-blue-300/80 shadow-[0_0_18px_3px_rgba(37,99,235,0.55)]" />
             {/* Image container */}
-            <div className="absolute inset-0 bg-white dark:bg-gray-900 rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm">
+            <div className="absolute inset-0 bg-white dark:bg-gray-900 rounded-full overflow-hidden border-2 border-blue-500/70 shadow-[0_0_22px_rgba(37,99,235,0.45)]">
               <img 
                 src={`${import.meta.env.BASE_URL}assets/images/photo_profil_Ange_TEUFACK.png`}
                 alt={`Photo de ${portfolioData.hero.name}`} 

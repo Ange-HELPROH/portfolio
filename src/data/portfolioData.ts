@@ -157,7 +157,7 @@ export const portfolioData = {
       problem: "Les passionnés de tech manquent d'un espace centralisé pour apprendre, comprendre et pratiquer avec l'aide de l'IA.",
       solution: "Application de chat IA générative construite pour aider les passionnés de tech à apprendre et progresser.",
       technologies: ["Next.js", "Supabase", "Google Gemini", "React", "TypeScript"],
-      images: [],
+      images: ["aiproh/1.png", "aiproh/2.png", "aiproh/3.png", "aiproh/4.png", "aiproh/5.png", "aiproh/6.png", "aiproh/7.png"],
       links: {
         demo: "https://aiproh.vercel.app",
         status: "En déploiement"
@@ -173,7 +173,7 @@ export const portfolioData = {
       problem: "Les étudiants et passionnés tech manquent d'un espace structuré pour apprendre progressivement (formations, définitions, parcours).",
       solution: "Plateforme web d'apprentissage tech centralisant formations, définitions et parcours pédagogiques.",
       technologies: ["Web app", "Data", "IA"],
-      images: [],
+      images: ["helproh/1.png", "helproh/2.png", "helproh/3.png", "helproh/4.png", "helproh/5.png", "helproh/6.png", "helproh/7.png", "helproh/8.png"],
       links: {
         demo: "https://helproh.vercel.app",
         status: "En déploiement"
@@ -189,7 +189,7 @@ export const portfolioData = {
       problem: "Carlos Dias, coach en développement personnel, hypnothérapie et médecine chinoise (plus de 20 ans d'expérience), avait besoin d'une présence professionnelle en ligne complète.",
       solution: "Conception et développement complet du site vitrine : intégration Calendly pour la prise de rendez-vous, pages de vente pour formations en ligne, section témoignages clients, ebook en vente directe, design adapté à l'univers du client.",
       technologies: ["WordPress", "Hostinger", "UX/UI", "SEO", "Calendly"],
-      images: [],
+      images: ["lemindsetdutao/1.png", "lemindsetdutao/2.png", "lemindsetdutao/3.png", "lemindsetdutao/4.png", "lemindsetdutao/5.png"],
       links: {
         demo: "https://www.lemindsetdutao.com/",
         status: "Site publié"
@@ -205,7 +205,7 @@ export const portfolioData = {
       problem: "Le suivi des revenus, dépenses et indicateurs financiers devient vite difficile sans interface centralisée et lisible.",
       solution: "Application web développée en équipe de 5 étudiants (contributeurs : Ayoub, Maroua et 1 autre) permettant le suivi des revenus/dépenses, visualisation via graphiques dynamiques, export de rapports en PDF.",
       technologies: ["PHP", "Bootstrap", "Chart.js", "JavaScript", "XAMPP"],
-      images: ["fintrack.png"],
+      images: ["fintrack/1.png", "fintrack/2.png", "fintrack/3.png", "fintrack/4.png", "fintrack/5.png", "fintrack/6.png", "fintrack/7.png", "fintrack/8.png", "fintrack/9.png", "fintrack/10.png", "fintrack/11.png", "fintrack/12.png"],
       links: {
         status: "Code privé, Démo non publique"
       },
@@ -220,7 +220,7 @@ export const portfolioData = {
       problem: "Conception d'un chargeur AC/DC optimisé en équipe.",
       solution: "Coordination d'une équipe de 5 étudiants pour la conception d'un chargeur AC/DC. Gestion du cycle en V, suivi Gantt, modélisation 3D des composants et analyse du cycle de vie.",
       technologies: ["IoT", "LTspice", "Cycle en V"],
-      images: ["ecovolt-engineering.png"],
+      images: ["ecovolt/1.png", "ecovolt/2.png", "ecovolt/3.png", "ecovolt/4.png"],
       links: {
         status: "Projet Académique"
       },
@@ -235,7 +235,7 @@ export const portfolioData = {
       problem: "Les étudiants étrangers souhaitant faire leurs études en France font face à des démarches administratives et académiques complexes.",
       solution: "Plateforme de conseil et d'orientation développée par mes soins, centralisant l'accompagnement Campus France (dossier, choix des universités, préparation aux entretiens), le soutien académique, et des ressources en ligne (guides, FAQ, centre d'aide).",
       technologies: ["TypeScript", "Web app", "UI/UX", "GitHub"],
-      images: ["etudencia.png"],
+      images: ["etudencia/1.png", "etudencia/2.png", "etudencia/3.png", "etudencia/4.png", "etudencia/5.png"],
       links: {
         demo: "https://www.etudencia.com/",
         status: "Site publié"
@@ -251,7 +251,7 @@ export const portfolioData = {
       problem: "Besoin d'un projet interactif pour maîtriser les bases de la logique algorithmique en Python.",
       solution: "Développement d'un jeu de devinette interactif en ligne de commande, avec gestion des erreurs, niveaux de difficulté et suivi des scores.",
       technologies: ["Python", "Logique Algorithmique"],
-      images: [],
+      images: ["jeu-devinette-python/1.png", "jeu-devinette-python/2.png", "jeu-devinette-python/3.png", "jeu-devinette-python/4.png", "jeu-devinette-python/5.png"],
       links: {
         status: "Code privé"
       },
